@@ -1436,6 +1436,8 @@ pub mod layouts {
                 KeyCode::Nu => {
                     if modifiers.is_shifted() {
                         DecodedKey::Unicode('Ñ')
+                    } else if modifiers.alt_gr {
+                        DecodedKey::Unicode('~')
                     } else {
                         DecodedKey::Unicode('ñ')
                     }
